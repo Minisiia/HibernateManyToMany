@@ -28,7 +28,8 @@ public class Main {
                     LOG.info(author.getName() + " " + author.getLastName());
                 }
             }
-        } System.out.println((char) 27 + "[34m" + "Authors with several books:" + (char) 27 + "[38m");
+        }
+        System.out.println((char) 27 + "[34m" + "Authors with several books:" + (char) 27 + "[38m");
         List<Author> authorList = ah.getAuthorList();
         Author author = new Author();
         for (int i = 1; i <= authorList.size(); i++) {
@@ -41,36 +42,6 @@ public class Main {
                     LOG.info(book.getName());
                 }
             }
-
         }
-//        List<Author> authorList = ah.getAuthorList();
-//       for (Author author : authorList) {
-//           List<Book> bookList1 = author.getBooks();
-//           for (Book book : bookList1) {
-//                    System.out.println(book);
-//             }
-//       }
-//        System.out.println("Authors with several books:");
-//        List<Author> authorList = ah.getAuthorList();
-//        for (Author author : authorList) {
-//            List<Book> bookList1 = author.getBooks();
-//            if (bookList1.size() > 1) {
-//                System.out.println("Author: " + author.getName() + " " + author.getLastName());
-//                System.out.println("Books:");
-//                for (Book book : bookList1) {
-//                    System.out.println(book.getName());
-//                }
-//            }
-//        }
-
-//        Author author = ah.getAuthorById(1);
-//
-//        LOG.debug(author.getName());
-//
-//        List<Book> authorBooks = author.getBooks();
-//
-//        for (Book book : authorBooks) {
-//            LOG.debug(book.getName());
-//        }
     }
 }
