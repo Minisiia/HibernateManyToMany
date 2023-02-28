@@ -1,11 +1,9 @@
 package many_to_many.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-//@Table(name = "author")
 public class Author {
 
     @Id
