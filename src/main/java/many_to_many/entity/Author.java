@@ -17,15 +17,9 @@ public class Author {
     @Column(name = "last_name")
     private String lastName;
 
-    //@OneToMany(fetch = FetchType.EAGER, targetEntity = Book.class, mappedBy = "author")
-/*    @ManyToMany()
-    @JoinTable(name = "author_book",
-            joinColumns =  @JoinColumn(name = "author_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id")
-    )*/
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "author_book",
-            joinColumns =  @JoinColumn(name = "author_id"),
+            joinColumns = @JoinColumn(name = "author_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
     private List<Book> books;
 
@@ -38,8 +32,8 @@ public class Author {
     }
 
     public Author(int id, String name) {
-         this.id = id;
-         this.name = name;
+        this.id = id;
+        this.name = name;
     }
 
     public Author(int id, String name, String lastName) {

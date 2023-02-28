@@ -14,15 +14,7 @@ public class Book {
 
     private String name;
 
-//    @ManyToOne
-//    @JoinColumn(name = "author_id")
-   // @ManyToMany(mappedBy = "books")
-/*@ManyToMany(mappedBy = "books")
-@JoinTable(name = "author_book",
-        joinColumns =  @JoinColumn(name = "book_id"),
-        inverseJoinColumns = @JoinColumn(name = "author_id")
-)*/
-@ManyToMany(mappedBy = "books",fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "books", fetch = FetchType.EAGER)
 
     private List<Author> authors;
 
