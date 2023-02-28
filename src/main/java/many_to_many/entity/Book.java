@@ -14,7 +14,6 @@ public class Book {
     private String name;
 
     @ManyToMany(mappedBy = "books", fetch = FetchType.EAGER)
-
     private List<Author> authors;
 
     public int getId() {
